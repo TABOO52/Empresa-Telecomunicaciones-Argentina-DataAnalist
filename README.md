@@ -104,18 +104,18 @@ Tanto en el EDA como en ETL haremos una ingesta de todos las hojas de excel y la
 
 Primero guardamos todos los archivos de excel en variables para poderlas manipular.
 
-'''
+```
 internet = basepath + 'data/Internet.xlsx'
 portabilidad = basepath + 'data/Portabilidad.xlsx'
 servicios_postales = basepath + 'data/servicios_postales.xlsx'
 telefonia_fija = basepath + 'data/Telefonia_fija.xlsx'
-'''
+```
 
 Nuestra variable 'basepath' está definida por la ruta de nuestro directorio que nos lleva hasta la carpeta que contiene los archivos. ejemplo:
 
-'''
+```
 C:/User/Personal/Desktop/
-'''
+```
 
 Creamos los dataframes. 
 - 8 para el archivo Internet.
@@ -123,7 +123,7 @@ Creamos los dataframes.
 
 Total 12 dataframes.
 
-'''
+```
 df_CP1 = pd.read_excel(internet ,sheet_name= 'Acc_vel_loc_sinrangos')
 df_CP2 = pd.read_excel(internet ,sheet_name= 'Velocidad % por prov')
 df_CP3 = pd.read_excel(internet ,sheet_name= 'Accesos_tecnologia_localidad')
@@ -137,7 +137,7 @@ df_CC1 = pd.read_excel(portabilidad ,sheet_name= 'Portin')
 df_CC2 = pd.read_excel(servicios_postales ,sheet_name= 'unidades_telegraficas')
 df_CC3 = pd.read_excel(servicios_postales ,sheet_name= 'unidades_monetarios')
 df_CC4 = pd.read_excel(telefonia_fija ,sheet_name= 'Fija_ingresos')
-'''
+```
 
 2. **ETL Database**
 3. **EDA Database + Analisis**
