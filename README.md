@@ -41,7 +41,8 @@ En este proyecto vamos a resolver esta pregunta y llevarla mas allá, plantenado
 Una vez entendido las necesidades de nuestro cliente procedemos a diseñar la estructura del proyecto sobre la que se sontendrá todo el desarrollo y exito del mismo.
 
 ### **Uso y Ejecución**
-
+Diccionario de datos: 
+- Bajas velocidades: menores a 0.512Mbps
 ### **Metodología**
 Antes de comenzar con la primera etapa del proyecto y descargar todos los datos para el proyecto procederemos a realizar una pequeña pero importante etapa previa a la ingesta de datos.
 
@@ -61,12 +62,12 @@ Antes de comenzar con la primera etapa del proyecto y descargar todos los datos 
 
 
 
- 1. pk link idec  (tecnologia mas lenta)
+ 1. eliminada
  2. eliminada
  3. mapa Mbps x provincia x tiempo 
  4. eliminada
- 5. fk link indec
- 6. eliminada por falta de tecnologias
+ 5. eliminada
+ 6. eliminada 
  7. elimnada
  8. eliminada 
  9. eliminada
@@ -78,14 +79,12 @@ Antes de comenzar con la primera etapa del proyecto y descargar todos los datos 
  15. Grafica de barras
 
 - **Conjunto Principal: (CP)**
-  1. acc_vel_loc_sinrangos
-  2. Velocidad % por prov
-  3. Accesos_tecnologia_localidad
-  4. Penetración-poblacion
-  5. Penetracion-hogares
-  6. Penetracion totales
-  7. Accesos por velocidad
-  8. Ingresos
+  1. Velocidad % por prov
+  2. Penetración-poblacion
+  3. Penetracion-hogares
+  4. Penetracion totales
+  5. Accesos por velocidad
+  6. Ingresos
 
 - **Conjunto Complementario: (CC)**
   - portabilidad
@@ -118,15 +117,13 @@ C:/User/Personal/Desktop/
 ```
 
 Creamos los dataframes. 
-- 8 para el archivo Internet.
+- 6 para el archivo Internet.
 - 4 para archivos complementarios.
 
 Total 12 dataframes.
 
 ```
-df_CP1 = pd.read_excel(internet ,sheet_name= 'Acc_vel_loc_sinrangos')
 df_CP2 = pd.read_excel(internet ,sheet_name= 'Velocidad % por prov')
-df_CP3 = pd.read_excel(internet ,sheet_name= 'Accesos_tecnologia_localidad')
 df_CP4 = pd.read_excel(internet ,sheet_name= 'Penetración-poblacion')
 df_CP5 = pd.read_excel(internet ,sheet_name= 'Penetracion-hogares')
 df_CP6 = pd.read_excel(internet ,sheet_name= 'Penetracion-totales')
@@ -137,6 +134,7 @@ df_CC1 = pd.read_excel(portabilidad ,sheet_name= 'Portin')
 df_CC2 = pd.read_excel(servicios_postales ,sheet_name= 'unidades_telegraficas')
 df_CC3 = pd.read_excel(servicios_postales ,sheet_name= 'unidades_monetarios')
 df_CC4 = pd.read_excel(telefonia_fija ,sheet_name= 'Fija_ingresos')
+
 ```
 
 2. **ETL Database**
