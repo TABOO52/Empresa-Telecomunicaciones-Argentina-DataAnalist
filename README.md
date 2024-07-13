@@ -76,7 +76,7 @@ Antes de comenzar con la primera etapa del proyecto y descargar todos los datos 
  12. diagrama de barras doble (hogares-poblacion)
  13. eliminada
  14. Grafica interesante (hacer al final) totales y luego velocidades
- 15. Grafica de barras
+ 15. Grafica de barras ingresos 
 
 - **Conjunto Principal: (CP)**
   1. Velocidad % por prov
@@ -122,7 +122,7 @@ Creamos los dataframes.
 
 Total 12 dataframes.
 
-```
+``
 df_CP2 = pd.read_excel(internet ,sheet_name= 'Velocidad % por prov')
 df_CP4 = pd.read_excel(internet ,sheet_name= 'Penetración-poblacion')
 df_CP5 = pd.read_excel(internet ,sheet_name= 'Penetracion-hogares')
@@ -138,6 +138,8 @@ df_CC4 = pd.read_excel(telefonia_fija ,sheet_name= 'Fija_ingresos')
 ```
 
 2. **ETL Database**
+Los primeros dataframes se concatenan para buscar una tabla que contenga los datos suficientes para realizar un mapa con:
+- Ac
 3. **EDA Database + Analisis**
 4. **Dasboard KPI + Analisis**
 5. **Preparación DEMO**
