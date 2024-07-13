@@ -108,6 +108,7 @@ internet = basepath + 'data/Internet.xlsx'
 portabilidad = basepath + 'data/Portabilidad.xlsx'
 servicios_postales = basepath + 'data/servicios_postales.xlsx'
 telefonia_fija = basepath + 'data/Telefonia_fija.xlsx'
+mapa_conectividad = basepath + 'data/mapa_conectividad.xlsx'
 ```
 
 Nuestra variable 'basepath' está definida por la ruta de nuestro directorio que nos lleva hasta la carpeta que contiene los archivos. ejemplo:
@@ -122,7 +123,7 @@ Creamos los dataframes.
 
 Total 12 dataframes.
 
-``
+```
 df_CP2 = pd.read_excel(internet ,sheet_name= 'Velocidad % por prov')
 df_CP4 = pd.read_excel(internet ,sheet_name= 'Penetración-poblacion')
 df_CP5 = pd.read_excel(internet ,sheet_name= 'Penetracion-hogares')
@@ -130,16 +131,28 @@ df_CP6 = pd.read_excel(internet ,sheet_name= 'Penetracion-totales')
 df_CP7 = pd.read_excel(internet ,sheet_name= 'Accesos por velocidad')
 df_CP8 = pd.read_excel(internet ,sheet_name= 'Ingresos')
 
-df_CC1 = pd.read_excel(portabilidad ,sheet_name= 'Portin')
-df_CC2 = pd.read_excel(servicios_postales ,sheet_name= 'unidades_telegraficas')
-df_CC3 = pd.read_excel(servicios_postales ,sheet_name= 'unidades_monetarios')
-df_CC4 = pd.read_excel(telefonia_fija ,sheet_name= 'Fija_ingresos')
+df_CC1 = pd.read_excel(mapa_conectividad ,sheet_name= 'Hoja3')
+df_CC2 = pd.read_excel(portabilidad ,sheet_name= 'Portin')
+df_CC3 = pd.read_excel(servicios_postales ,sheet_name= 'unidades_telegraficas')
+df_CC4 = pd.read_excel(servicios_postales ,sheet_name= 'unidades_monetarios')
+df_CC5 = pd.read_excel(telefonia_fija ,sheet_name= 'Fija_ingresos')
 
 ```
 
 2. **ETL Database**
-Los primeros dataframes se concatenan para buscar una tabla que contenga los datos suficientes para realizar un mapa con:
-- Ac
+
+### Dataframe maps
+Los primeros dataframes se concatenan para buscar una tabla que contenga los datos suficientes para realizar un mapa por provincia a travez del tiempo con:
+
+- Mbps (Media de bajada)
+- Accesos por cada 100 hab
+- Accesos por cada 100  hogares
+
+Pero aun nos falta asignar una latitud promedio de cada provincia. Por lo que vamos a generar un csv que contenga la Latitud y la Longitud de cada provincia promedio.
+
+Para unir estos dataframes usaremos un leftjoin, donde la mayoria de los datos quedaran en el dataframe maps.
+Sin embargo deberemos hacer un pequeño ETL en nuestro dataframe de mapas, pondremos todas las provincias en mayuscula y quitaremos las tildes, de esta manera solo nos quedaran algunas latitudes nulas cuyo valor limpiaremos en el EDA
+
 3. **EDA Database + Analisis**
 4. **Dasboard KPI + Analisis**
 5. **Preparación DEMO**
