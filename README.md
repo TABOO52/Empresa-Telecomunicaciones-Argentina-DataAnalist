@@ -192,6 +192,15 @@ Para la realización deldashbard elejimos 3 aspectos a trabajar:
 7. **Preparación DEMO**
 Para la preparación de la demos tomamos un cuadernos, generamos una lluvia de ideas de la información relevante que debemos tocar y comenzamos a organizar un flujo de las mismas a modo de storytelling para poder conducir al usuario a una experiencia grata e ineteresante de manera que logre captar la mayoria de los datos importantes a transmitir.
 ### **Resultados y conclusiones**
+Luego de hacer todos los pasos anteriores logramos una interfaz como la que se muestra a continuación:
+
+<div id="header" align="center">
+  <img src="images/resiltado1.png" width="450"/>
+</div>
+- 
+<div id="header" align="center">
+  <img src="images/resiltado2.png" width="450"/>
+</div>
 
 ### **Contribución y colaboración**
 ¡Gracias por considerar contribuir a este proyecto! Valoramos y damos la bienvenida a las contribuciones de la comunidad. Si tienes ideas para mejorar la estructura del proyecto o cualquier otra sugerencia, no dudes en proponer cambios.
