@@ -198,13 +198,22 @@ Luego de hacer todos los pasos anteriores logramos una interfaz como la que se m
   <img src="images/resiltado1.png" width="450"/>
 </div>
 
-  1. **KPI REQUERIDO** Se analizaron los valores para la provincia de Buenos aires, y aunque se observó que aunque si bien es cierto hubo un año en el que se cumplió con el parametro de un aumento del 2% no parece ser suficiente para poder establecer una mejoria clara.
+  **KPI REQUERIDO:**  Se analizaron los valores para la provincia de Buenos aires, y aunque se observó que aunque si bien es cierto hubo un año en el que se cumplió con el parametro de un aumento del 2% no parece ser suficiente para poder establecer una mejoria clara.
 
   La mayoria de los años desde el 2013 solo lograban cumplir al menos en uno de los 4 trimestres. El caso es aun mas preocupante cuando se observa que en el ultimo año (2023) no se logró cumplir la metrica en ninguno de los trimestres.
 
   Aunque para buenos aires logramos una buena cantidad de que al menos el 80,96% de hogares en  esta provincia cuentan con internet, en el pais solo se logra la cantidad de un 67%, lo que nos deja claro que un nos queda mucho por trabajar, no por lograr un 100% sino por lograr una uniformidad en el serivicio de internet del pais. 
 
   Que una provincia tenga un buen indice de hogares con internet no asegura que todas las provincias se comporten de la misma manera.
+
+  **KPI Velocidad trimestral media:** En este KPI nos encontramos con una situación bastante interesante. Aunque de entrada al revisar los datos desde el año 2023 hasta el 2014 los datos aunque parecen estar bajando de manera constante. Estos no supera una disminución promedio del 0,5%.
+  En otras palabras, entre trimestres desde el 2023 hacia atras hemos presentado una disminución no mayor al 1% del promedio de la población por trimestre. 
+
+  Esto deja muy bien parado a las redes que se encargan de los usuarios de forma individual, pues demuestran tener una consistencia solida, con pocos fallos y de haberlos saben resolver la situación para que los habitantes cotizantes de su servicio logren contar con el acceso a internet.
+
+  **KPI Tasa de crecimiento anual** En este KPI aunque comenzamos analizando la tasa desde el 2023 se ha observado que durante los años en los que se tomaron los datos tuvimos un gran incremento en el ultimo año de 2022 a 2023, consiguiendo un aumento del 50% en la tasa de crecimiento de velocidad con respecto a ese año. Demostrando asi un gran aumento en la calidad del servicio a internet permitiendo a los usuarios una navegación mas rapida.
+
+
 <div id="header" align="center">
   <img src="images/resiltado2.png" width="450"/>
 </div>
