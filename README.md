@@ -73,7 +73,7 @@ Antes de comenzar con la primera etapa del proyecto y descargar todos los datos 
  9. eliminada
  10. mapa poblacion x provincia x tiempo (penetracion)
  11. mapa hogares x provincia x tiempo (penetracion)
- 12. diagrama de barras doble (hogares-poblacion)
+ 12. eliminada
  13. eliminada
  14. Grafica interesante (hacer al final) totales y luego velocidades
  15. Grafica de barras ingresos 
@@ -154,6 +154,7 @@ Para unir estos dataframes usaremos un leftjoin, donde la mayoria de los datos q
 Sin embargo deberemos hacer un pequeño ETL en nuestro dataframe de mapas, pondremos todas las provincias en mayuscula y quitaremos las tildes, de esta manera solo nos quedaran algunas latitudes nulas cuyo valor limpiaremos en el EDA
 
 3. **EDA Database + Analisis**
+Seguimos el indice registrado en el archivo EDA_maps.
 4. **Dasboard KPI + Analisis**
 5. **Preparación DEMO**
 
