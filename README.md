@@ -197,7 +197,14 @@ Luego de hacer todos los pasos anteriores logramos una interfaz como la que se m
 <div id="header" align="center">
   <img src="images/resiltado1.png" width="450"/>
 </div>
-- 
+
+  1. **KPI REQUERIDO** Se analizaron los valores para la provincia de Buenos aires, y aunque se observó que aunque si bien es cierto hubo un año en el que se cumplió con el parametro de un aumento del 2% no parece ser suficiente para poder establecer una mejoria clara.
+
+  La mayoria de los años desde el 2013 solo lograban cumplir al menos en uno de los 4 trimestres. El caso es aun mas preocupante cuando se observa que en el ultimo año (2023) no se logró cumplir la metrica en ninguno de los trimestres.
+
+  Aunque para buenos aires logramos una buena cantidad de que al menos el 80,96% de hogares en  esta provincia cuentan con internet, en el pais solo se logra la cantidad de un 67%, lo que nos deja claro que un nos queda mucho por trabajar, no por lograr un 100% sino por lograr una uniformidad en el serivicio de internet del pais. 
+
+  Que una provincia tenga un buen indice de hogares con internet no asegura que todas las provincias se comporten de la misma manera.
 <div id="header" align="center">
   <img src="images/resiltado2.png" width="450"/>
 </div>
