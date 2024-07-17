@@ -183,7 +183,7 @@ df_kpis['KPI_variacion_trimestral_media'] = df_kpis.groupby(['Provincia', 'Año'
 ```
 
 Luego realizamos la preparación de los KPI's basandonos en el siguiente material de estudio:
-[Como realizar un KPI en power bi[(https://www.youtube.com/watch?v=xEjZDT0N1JQ&t=633s)
+[Como realizar un KPI en power bi](https://www.youtube.com/watch?v=xEjZDT0N1JQ&t=633s)
 
 Para la realización deldashbard elejimos 3 aspectos a trabajar:
 -  Mapa de burbujas que identificara las provincias destacadas en velocidades de internet segun el filtro.
@@ -192,7 +192,7 @@ Para la realización deldashbard elejimos 3 aspectos a trabajar:
 7. **Preparación DEMO**
 Para la preparación de la demos tomamos un cuadernos, generamos una lluvia de ideas de la información relevante que debemos tocar y comenzamos a organizar un flujo de las mismas a modo de storytelling para poder conducir al usuario a una experiencia grata e ineteresante de manera que logre captar la mayoria de los datos importantes a transmitir.
 ### **Resultados y conclusiones**
-fvfv
+
 ### **Contribución y colaboración**
 ¡Gracias por considerar contribuir a este proyecto! Valoramos y damos la bienvenida a las contribuciones de la comunidad. Si tienes ideas para mejorar la estructura del proyecto o cualquier otra sugerencia, no dudes en proponer cambios.
 
