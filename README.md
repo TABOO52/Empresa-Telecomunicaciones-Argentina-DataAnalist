@@ -37,12 +37,22 @@ En este proyecto vamos a resolver esta pregunta y llevarla mas allá, plantenado
 - Todas las librerias usadas las encuentras en el archivo "requirements.txt"
 - Power BI (ultimas versiones de preferencia)
 
-### **Estrucutra del proyecto**
+### **Estructura del proyecto**
 Una vez entendido las necesidades de nuestro cliente procedemos a diseñar la estructura del proyecto sobre la que se sontendrá todo el desarrollo y exito del mismo.
 
+<div id="header" align="center">
+  <img src="images/estructura_proyecto2.gif" width="750"/>
+</div>
+
 ### **Uso y Ejecución**
-Diccionario de datos: 
-- Bajas velocidades: menores a 0.512Mbps
+- Abrir archivo de power bi ubicado en este repo.
+- Selecciona con el boton izquierdo del raton el filtro que quieres aplicar para obtener los kpi o la información.
+- Con `Ctrl + doble click` puedes usar la herramienta de navegacion del dashboard.
+
+### **Datos y fuentes**
+- [Diccionario de datos](https://docs.google.com/document/d/1BYW0vT_DNIjjKM9v4hNg5KmqjRNOc7OBB1jCXc80gnI/edit#heading=h.hjukififf3ol)
+- [Atribucion uso de iconos Freepic](https://www.flaticon.es/iconos-gratis/pregunta)
+  
 ### **Metodología**
 Antes de comenzar con la primera etapa del proyecto y descargar todos los datos para el proyecto procederemos a realizar una pequeña pero importante etapa previa a la ingesta de datos.
 
@@ -154,12 +164,36 @@ Para unir estos dataframes usaremos un leftjoin, donde la mayoria de los datos q
 Sin embargo deberemos hacer un pequeño ETL en nuestro dataframe de mapas, pondremos todas las provincias en mayuscula y quitaremos las tildes, de esta manera solo nos quedaran algunas latitudes nulas cuyo valor limpiaremos en el EDA
 
 3. **EDA Database + Analisis**
-4. **Dasboard KPI + Analisis**
-5. **Preparación DEMO**
+_Seguir la documentacion en el notebook EDA._
+5. **Dasboard KPI + Analisis**
+Para la realización del dashboard tuvimos que crear nuevas columnas planteando los 3 KPI de la siguiente manera:
 
+```
+# KPI solicitado
+df_kpis['Accesos_siguiente_trimestre'] = df_kpis.groupby('Provincia')['Accesos por cada 100 hogares'].shift(-1)
+df_kpis['KPI_propuesto'] = ((df_kpis['Accesos por cada 100 hogares'] - df_kpis['Accesos_siguiente_trimestre']) / df_kpis['Accesos por cada 100 hogares']) * 100
+
+# KPI 1: Tasa de crecimiento anual en el acceso a Internet
+df_kpis['Mbps_ano_anterior'] = df_kpis.groupby('Provincia')['Mbps (Media de bajada)'].shift(4)
+df_kpis['KPI_crecimiento_anual'] = ((df_kpis['Mbps (Media de bajada)'] - df_kpis['Mbps_ano_anterior']) / df_kpis['Mbps_ano_anterior']) * 100
+
+# KPI 2: Variación trimestral media en el acceso a Internet
+df_kpis['Variacion_trimestral'] = df_kpis.groupby('Provincia')['Accesos por cada 100 hab'].diff()
+df_kpis['KPI_variacion_trimestral_media'] = df_kpis.groupby(['Provincia', 'Año'])['Variacion_trimestral'].transform('mean')
+```
+
+Luego realizamos la preparación de los KPI's basandonos en el siguiente material de estudio:
+[Como realizar un KPI en power bi[(https://www.youtube.com/watch?v=xEjZDT0N1JQ&t=633s)
+
+Para la realización deldashbard elejimos 3 aspectos a trabajar:
+-  Mapa de burbujas que identificara las provincias destacadas en velocidades de internet segun el filtro.
+-  Diagrama de barras cruzado que identificara la relación entre hogares y habitantes.
+-  Tarjetas para una sencilla visualización del valor exacto de habitantes y hogares.
+7. **Preparación DEMO**
+Para la preparación de la demos tomamos un cuadernos, generamos una lluvia de ideas de la información relevante que debemos tocar y comenzamos a organizar un flujo de las mismas a modo de storytelling para poder conducir al usuario a una experiencia grata e ineteresante de manera que logre captar la mayoria de los datos importantes a transmitir.
 ### **Resultados y conclusiones**
-
-### **Contribucion y colaboración**
+fvfv
+### **Contribución y colaboración**
 ¡Gracias por considerar contribuir a este proyecto! Valoramos y damos la bienvenida a las contribuciones de la comunidad. Si tienes ideas para mejorar la estructura del proyecto o cualquier otra sugerencia, no dudes en proponer cambios.
 
 <div id="header" align="center">
