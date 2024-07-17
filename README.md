@@ -37,12 +37,22 @@ En este proyecto vamos a resolver esta pregunta y llevarla mas allá, plantenado
 - Todas las librerias usadas las encuentras en el archivo "requirements.txt"
 - Power BI (ultimas versiones de preferencia)
 
-### **Estrucutra del proyecto**
+### **Estructura del proyecto**
 Una vez entendido las necesidades de nuestro cliente procedemos a diseñar la estructura del proyecto sobre la que se sontendrá todo el desarrollo y exito del mismo.
 
+<div id="header" align="center">
+  <img src="images/estructura_proyecto2.gif" width="750"/>
+</div>
+
 ### **Uso y Ejecución**
-Diccionario de datos: 
-- Bajas velocidades: menores a 0.512Mbps
+- Abrir archivo de power bi ubicado en este repo.
+- Selecciona con el boton izquierdo del raton el filtro que quieres aplicar para obtener los kpi o la información.
+- Con `Ctrl + doble click` puedes usar la herramienta de navegacion del dashboard.
+
+### **Datos y fuentes**
+- [Diccionario de datos](https://docs.google.com/document/d/1BYW0vT_DNIjjKM9v4hNg5KmqjRNOc7OBB1jCXc80gnI/edit#heading=h.hjukififf3ol)
+- [Atribucion uso de iconos Freepic](https://www.flaticon.es/iconos-gratis/pregunta)
+  
 ### **Metodología**
 Antes de comenzar con la primera etapa del proyecto y descargar todos los datos para el proyecto procederemos a realizar una pequeña pero importante etapa previa a la ingesta de datos.
 
@@ -154,13 +164,21 @@ Para unir estos dataframes usaremos un leftjoin, donde la mayoria de los datos q
 Sin embargo deberemos hacer un pequeño ETL en nuestro dataframe de mapas, pondremos todas las provincias en mayuscula y quitaremos las tildes, de esta manera solo nos quedaran algunas latitudes nulas cuyo valor limpiaremos en el EDA
 
 3. **EDA Database + Analisis**
-Seguimos el indice registrado en el archivo EDA_maps.
 4. **Dasboard KPI + Analisis**
 5. **Preparación DEMO**
 
 ### **Resultados y conclusiones**
+Luego de hacer todos los pasos anteriores logramos una interfaz como la que se muestra a continuación:
 
-### **Contribucion y colaboración**
+<div id="header" align="center">
+  <img src="images/resiltado1.png" width="450"/>
+</div>
+- 
+<div id="header" align="center">
+  <img src="images/resiltado2.png" width="450"/>
+</div>
+
+### **Contribución y colaboración**
 ¡Gracias por considerar contribuir a este proyecto! Valoramos y damos la bienvenida a las contribuciones de la comunidad. Si tienes ideas para mejorar la estructura del proyecto o cualquier otra sugerencia, no dudes en proponer cambios.
 
 <div id="header" align="center">
